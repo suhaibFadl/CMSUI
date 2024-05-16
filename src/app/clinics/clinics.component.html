@@ -1,0 +1,8 @@
+<h1>Clinics</h1>
+<ul>
+    <li *ngFor="let clinic of service.clinics" >
+        {{ clinic.name }}
+        <a routerLink="edit-clinic/{{clinic.clinicId}}">Edit</a>
+        <button class="btn btn-danger m-2" (click)="onDelete(clinic.clinicId)">Delete</button>
+    </li>
+</ul>

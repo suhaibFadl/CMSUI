@@ -1,0 +1,8 @@
+<h1>Cities</h1>
+<ul>
+    <li *ngFor="let city of service.cities" >
+        {{ city.name }}
+        <a routerLink="edit-city/{{city.cityId}}">Edit</a>
+        <button class="btn btn-danger m-2" (click)="onDelete(city.cityId)">Delete</button>
+    </li>
+</ul>
