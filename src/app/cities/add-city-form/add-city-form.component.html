@@ -1,0 +1,13 @@
+
+<div class="container bg-primary p-5 my-5 col justify-content-center">
+    <h1>Edit A City</h1>
+    <!-- <form #form="ngForm" (submit)="onSubmit(form)" [class.submitted]="service.formSubmitted" class="justify-content-center"> -->
+    <form #form="ngForm" (submit)="addCity(form)" class="justify-content-center">
+        <label for="city" class="text-light"><h4>City</h4></label>
+        <div class="mx-1"></div>
+        <input class="form-control form-control-lg" placeholder="{{service.city.name}}" #name="ngModel" name="name"
+        [(ngModel)]="service.city.name" required>
+        <!-- <input name="city" type="text" value=""> -->
+        <input type="submit" value="Save" class="py-1 m-2 btn btn-light rounded-0">
+    </form>
+</div>
